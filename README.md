@@ -1,0 +1,69 @@
+## Building a Startup Categorizer with Blog
+https://github.com/gurnitha/django-startup-categorizer-with-blog
+
+### 1 Starting a New Django Project: Building a Startup Categorizer with Blog 3
+
+#### 1.1 Introduction
+		PASS
+#### 1.2 Website Basics
+		PASS
+#### 1.3 Understanding Modern Websites
+		PASS
+#### 1.4 Building Modern Websites: The Problems That Frameworks Solve and Their Caveats
+		PASS
+#### 1.5 Django: Python Web Framework
+		PASS
+#### 1.6 Defining the Project in Part I
+		PASS
+
+		In Part I, we focus on the most basic features. We create the blog, startup, and tagging
+		system in Django. The goal is to make Django’s core, features necessary to every website, as
+		evident as possible.
+
+		List the webpages we will build in Part I:
+
+		1. A page to list tags
+		2. A page for each tag
+		3. A page to add a new tag
+
+		4. A page to list startups
+		5. A page for each startup
+		6. A page to add a new startup
+
+		7. A page to list blog posts
+		8. A page for each blog post (which also lists news articles)
+		9. A page to add a new blog post
+
+		10. A page to add and connect news articles to blog posts	
+		
+#### 1.7 Creating a New Django Project and Django Apps
+
+		(venv3922) ing| tree -L 2
+		.
+		├── blog
+		│   ├── __init__.py
+		│   ├── __pycache__
+		│   ├── admin.py
+		│   ├── apps.py
+		│   ├── migrations
+		│   ├── models.py
+		│   ├── tests.py
+		│   └── views.py
+		├── db.sqlite3
+		├── manage.py
+		├── organizer
+		│   ├── __init__.py
+		│   ├── __pycache__
+		│   ├── admin.py
+		│   ├── apps.py
+		│   ├── migrations
+		│   ├── models.py
+		│   ├── tests.py
+		│   └── views.py
+		└── suorganizer
+		    ├── __init__.py
+		    ├── __pycache__
+		    ├── asgi.py
+		    ├── settings.py
+		    ├── urls.py
+		    └── wsgi.py
