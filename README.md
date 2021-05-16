@@ -134,12 +134,91 @@ https://github.com/gurnitha/django-startup-categorizer-with-blog
 
 #### 3.6 Controlling Model Behavior with Nested Meta Classes
 
+#### 3.7 Create database: run migration and createsuperuser
+
+		(venv3922) ing| python3 manage.py sqlmigrate blog 0001
+		BEGIN;
+		--
+		-- Create model Post
+		--
+
+		CREATE TABLE "blog_post" (
+			"id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, 
+			"title" varchar(63) NOT NULL, 
+			"slug" varchar(63) NOT NULL, 
+			"text" text NOT NULL, 
+			"pub_date" date NOT NULL
+		);
+
+		CREATE TABLE "blog_post_startups" (
+			"id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, 
+			"post_id" bigint NOT NULL REFERENCES "blog_post" ("id") DEFERRABLE INITIALLY DEFERRED, 
+			"startup_id" bigint NOT NULL REFERENCES "organizer_startup" ("id") DEFERRABLE INITIALLY DEFERRED
+		);
+
+		CREATE TABLE "blog_post_tags" (
+			"id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, 
+			"post_id" bigint NOT NULL REFERENCES "blog_post" ("id") DEFERRABLE INITIALLY DEFERRED, 
+			"tag_id" bigint NOT NULL REFERENCES "organizer_tag" ("id") DEFERRABLE INITIALLY DEFERRED
+		);
+
+		CREATE INDEX "blog_post_slug_b95473f2" ON "blog_post" ("slug");
+		CREATE UNIQUE INDEX "blog_post_startups_post_id_startup_id_459561f9_uniq" ON "blog_post_startups" ("post_id", "startup_id");
+		CREATE INDEX "blog_post_startups_post_id_b1153755" ON "blog_post_startups" ("post_id");
+		CREATE INDEX "blog_post_startups_startup_id_a3e30c05" ON "blog_post_startups" ("startup_id");
+		CREATE UNIQUE INDEX "blog_post_tags_post_id_tag_id_4925ec37_uniq" ON "blog_post_tags" ("post_id", "tag_id");
+		CREATE INDEX "blog_post_tags_post_id_a1c71c8a" ON "blog_post_tags" ("post_id");
+		CREATE INDEX "blog_post_tags_tag_id_0875c551" ON "blog_post_tags" ("tag_id");
+		COMMIT;
 
 
+		(venv3922) ing| python3 manage.py sqlmigrate organizer 0001
 
+		BEGIN;
+		--
+		-- Create model Tag
+		--
+		CREATE TABLE "organizer_tag" (
+			"id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, 
+			"name" varchar(31) NOT NULL UNIQUE, 
+			"slug" varchar(50) NOT NULL UNIQUE
+		);
 
+		--
+		-- Create model Startup
+		--
+		CREATE TABLE "organizer_startup" (
+			"id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, 
+			"name" varchar(31) NOT NULL, 
+			"slug" varchar(31) NOT NULL UNIQUE, 
+			"description" text NOT NULL, 
+			"founded_date" date NOT NULL, 
+			"contact" varchar(225) NOT NULL, 
+			"website" varchar(200) NOT NULL
+		);
 
-
+		CREATE TABLE "organizer_startup_tags" (
+			"id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, 
+			"startup_id" bigint NOT NULL REFERENCES 
+			"organizer_startup" ("id") DEFERRABLE INITIALLY DEFERRED, 
+			"tag_id" bigint NOT NULL REFERENCES "organizer_tag" ("id") DEFERRABLE INITIALLY DEFERRED
+		);
+		--
+		-- Create model NewsLink
+		--
+		CREATE TABLE "organizer_newslink" (
+			"id" integer NOT NULL PRIMARY KEY AUTOINCREMENT, 
+			"title" varchar(63) NOT NULL, 
+			"pub_date" date NOT NULL, 
+			"link" varchar(225) NOT NULL, 
+			"startup_id" bigint NOT NULL REFERENCES "organizer_startup" ("id") DEFERRABLE INITIALLY DEFERRED
+		);
+		CREATE INDEX "organizer_startup_name_0080733f" ON "organizer_startup" ("name");
+		CREATE UNIQUE INDEX "organizer_startup_tags_startup_id_tag_id_982c6d9a_uniq" ON "organizer_startup_tags" ("startup_id", "tag_id");
+		CREATE INDEX "organizer_startup_tags_startup_id_94e79a84" ON "organizer_startup_tags" ("startup_id");
+		CREATE INDEX "organizer_startup_tags_tag_id_bcc66000" ON "organizer_startup_tags" ("tag_id");
+		CREATE INDEX "organizer_newslink_startup_id_ad247707" ON "organizer_newslink" ("startup_id");
+		COMMIT;
 
 
 
