@@ -247,4 +247,8 @@ https://github.com/gurnitha/django-startup-categorizer-with-blog
 	modified:   organizer/views.py
 	modified:   suorganizer/urls.py
 
+#### 5.5 Adding 404
+
+	modified:   README.md
+	modified:   organizer/views.py
 

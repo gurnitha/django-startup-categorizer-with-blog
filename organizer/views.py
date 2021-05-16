@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from .models import Tag
 
 # Create your views here.
@@ -15,7 +15,7 @@ def homepage(request):
 # Tag detail page
 def tag_detail(request, slug):
 	# slug = ?
-	tag = Tag.objects.get(slug__iexact=slug)
+	tag = get_object_or_404(Tag, slug__iexact=slug)
 	context = {
 		'tag': tag
 	}
