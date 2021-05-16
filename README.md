@@ -128,6 +128,14 @@ https://github.com/gurnitha/django-startup-categorizer-with-blog
 
 #### 3.3 (Re-saving) Adding Relational Fields to Our Models
 
+#### 3.4 Controlling Model Field Behavior with Field Options
+
+
+
+
+
+
+
 
 
 
