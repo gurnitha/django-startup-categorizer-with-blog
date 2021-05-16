@@ -130,6 +130,9 @@ https://github.com/gurnitha/django-startup-categorizer-with-blog
 
 #### 3.4 Controlling Model Field Behavior with Field Options
 
+#### 3.5 Adding Methods to Django Models
+
+
 
 
 

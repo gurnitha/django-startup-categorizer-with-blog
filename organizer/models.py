@@ -12,6 +12,9 @@ class Tag(models.Model):
 			unique=True,
 			help_text='A label for URL config.')
 
+	def __str__(self):
+		return self.name 
+
 
 # ORGANIZER MODELS: Startup
 class Startup(models.Model):
@@ -34,6 +37,9 @@ class Startup(models.Model):
 	## A tag may belongs to many startup
 	tags = models.ManyToManyField(Tag)
 
+	def __str__(self):
+		return self.name 
+
 
 # ORGANIZER MODELS: NewsLink
 class NewsLink(models.Model):
@@ -49,4 +55,8 @@ class NewsLink(models.Model):
 	startup = models.ForeignKey(
 			Startup,
 			on_delete=models.CASCADE)
+
+	def __str__(self):
+		return "{}:{}".format(
+			self.startup, self.title)
 
