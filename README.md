@@ -117,4 +117,4 @@ https://github.com/gurnitha/django-startup-categorizer-with-blog
 			.blog post and tag
 			.blog posts and startup
 
-
+#### 3.2 Creating models: blog/Post, organizer/Tag, organizer/Startup, organizer/NewsLink
