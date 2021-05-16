@@ -237,9 +237,14 @@ https://github.com/gurnitha/django-startup-categorizer-with-blog
 
 #### 5.2 Adding template inheritance and block head page title
 
+#### 5.3 Using parent_template|default filter
 
+#### 5.4 Adding tag_detail page and adding a URL Pattern for tag detail
 
-
-
+	modified:   README.md
+	new file:   organizer/templates/organizer/tag_detail.html
+	modified:   organizer/templates/organizer/tag_list.html
+	modified:   organizer/views.py
+	modified:   suorganizer/urls.py
 
 
