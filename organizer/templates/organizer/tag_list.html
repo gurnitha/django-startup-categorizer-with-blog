@@ -17,9 +17,14 @@
 		<main>
 			<h2>Tag List</h2>
 			<ul>
-				<li>Python</li>
-				<li>Flask</li>
-				<li>Django</li>
+				{% for tag in tag_list %}
+				<li>
+				<a href="">
+				{{ tag.name|title }}</a>
+				</li>
+				{% empty %}
+					<li><em>There are currently no Tags available.</em></li>
+				{% endfor %}
 			</ul>
 		</main>
 	</div>

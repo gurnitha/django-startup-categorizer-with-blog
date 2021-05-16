@@ -228,9 +228,12 @@ https://github.com/gurnitha/django-startup-categorizer-with-blog
 #### 4.1 Rapidly Producing Flexible HTML with Django Templates
 
 
+### -------5/12--------
 
 
+### 5. Creating Webpages with Controllers in Django: Views and URL Configurations
 
+#### 5.1 Rendering list of tags from db to tag_list.html page
 
 
 
