@@ -85,3 +85,36 @@ https://github.com/gurnitha/django-startup-categorizer-with-blog
 #### 2.2 Removing the 'helloworld' app
 
 
+### -------3/12--------
+
+
+### 3. Programming Django Models and Creating a SQLite Database
+
+#### 3.1 Specifying and Organizing Data in Django Using Models
+
+		.Tag
+			.tag name
+			.slug
+		.Startup
+			.name of company
+			.slug
+			.description or purpose
+			.date founded
+			.contact email
+			.website
+		.News Link
+			.title or headline
+			.link to article
+			.publication date
+			.foreign key to Startup
+		.Blog Post
+			.post title
+			.slug
+			.post text or description
+			.publication date
+		.Many-to-Many Relationships
+			.startup and tag
+			.blog post and tag
+			.blog posts and startup
+
+
