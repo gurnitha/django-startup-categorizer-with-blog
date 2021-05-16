@@ -235,6 +235,7 @@ https://github.com/gurnitha/django-startup-categorizer-with-blog
 
 #### 5.1 Rendering list of tags from db to tag_list.html page
 
+#### 5.2 Adding template inheritance and block head page title
 
 
 
