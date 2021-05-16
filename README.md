@@ -118,3 +118,13 @@ https://github.com/gurnitha/django-startup-categorizer-with-blog
 			.blog posts and startup
 
 #### 3.2 Creating models: blog/Post, organizer/Tag, organizer/Startup, organizer/NewsLink
+
+#### 3.3 Adding Relational Fields to Our Models
+
+		.A one-to-many relationship pointing news links to startups
+		.A many-to-many relationship between startups and tags
+		.A many-to-many relationship between blog posts and tags
+		.A many-to-many relationship between blog posts and startups
+
+
+		
