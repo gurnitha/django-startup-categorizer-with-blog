@@ -223,7 +223,9 @@ https://github.com/gurnitha/django-startup-categorizer-with-blog
 #### 3.8 Registering models: Post, Tag, Startup, NewsLink to admins
 
 
+### -------4/12--------
 
+#### 4.1 Rapidly Producing Flexible HTML with Django Templates
 
 
 
