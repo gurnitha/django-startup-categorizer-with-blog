@@ -220,6 +220,7 @@ https://github.com/gurnitha/django-startup-categorizer-with-blog
 		CREATE INDEX "organizer_newslink_startup_id_ad247707" ON "organizer_newslink" ("startup_id");
 		COMMIT;
 
+#### 3.8 Registering models: Post, Tag, Startup, NewsLink to admins
 
 
 
