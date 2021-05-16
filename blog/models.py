@@ -30,6 +30,13 @@ class Post(models.Model):
 			Startup,
 			related_name='blog_post')
 
+
+	class Meta:
+		verbose_name  = 'blog post'
+		ordering 	  = ['-pub_date', 'title']
+		get_latest_by = 'pub_date'
+
+
 	def __str__(self):
 		return "{} on {}".format(
 			self.title,

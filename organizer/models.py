@@ -37,6 +37,12 @@ class Startup(models.Model):
 	## A tag may belongs to many startup
 	tags = models.ManyToManyField(Tag)
 
+
+	class Meta:
+		ordering 	  = ['name']
+		get_latest_by = 'founded_date'
+
+
 	def __str__(self):
 		return self.name 
 
@@ -55,6 +61,13 @@ class NewsLink(models.Model):
 	startup = models.ForeignKey(
 			Startup,
 			on_delete=models.CASCADE)
+
+
+	class Meta:
+		verbose_name  = 'news article'
+		ordering 	  = ['-pub_date']
+		get_latest_by = 'pub_date'
+
 
 	def __str__(self):
 		return "{}:{}".format(

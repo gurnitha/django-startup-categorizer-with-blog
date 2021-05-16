@@ -132,6 +132,11 @@ https://github.com/gurnitha/django-startup-categorizer-with-blog
 
 #### 3.5 Adding Methods to Django Models
 
+#### 3.6 Controlling Model Behavior with Nested Meta Classes
+
+
+
+
 
 
 
