@@ -41,7 +41,6 @@ INSTALLED_APPS = [
     # First party apps
     'organizer',
     'blog',
-    'helloworld',
 ]
 
 MIDDLEWARE = [
