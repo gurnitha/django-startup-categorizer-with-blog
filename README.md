@@ -3,6 +3,9 @@ https://github.com/gurnitha/django-startup-categorizer-with-blog
 
 ## I. Django Core Features
 
+### -------1/12--------
+
+
 ### 1 Starting a New Django Project: Building a Startup Categorizer with Blog 3
 
 #### 1.1 Introduction
@@ -72,3 +75,12 @@ https://github.com/gurnitha/django-startup-categorizer-with-blog
 #### 1.8 Put it all togather - added .gitignore and readme.md files		    
 
 #### 1.9 Re-modified readme.md file
+
+
+### -------2/12--------
+
+### 2. Hello World: Building a Basic Webpage in Django
+
+#### 2.1 Creating and Integrating a New App (helloworld)
+
+
