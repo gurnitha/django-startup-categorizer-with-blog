@@ -19,12 +19,19 @@ class Startup(models.Model):
 	founded_date = models.DateField()
 	contact = models.EmailField()
 	website = models.URLField()
+	# ManyToMany Rel: 
+	## A Startup may have many tags
+	## A tag may belongs to many startup
+	tags = models.ManyToManyField(Tag)
 
 
 # ORGANIZER MODELS: NewsLink
 class NewsLink(models.Model):
-	
+
 	title = models.CharField(max_length=63)
 	pub_date = models.DateField()
 	link = models.URLField()
+	# OneToMany Rel: 
+	## A startup may have many newslink
+	startup = models.ForeignKey(Startup)
 

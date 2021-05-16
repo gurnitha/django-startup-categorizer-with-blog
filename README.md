@@ -126,5 +126,18 @@ https://github.com/gurnitha/django-startup-categorizer-with-blog
 		.A many-to-many relationship between blog posts and tags
 		.A many-to-many relationship between blog posts and startups
 
+#### 3.3 (Re-saving) Adding Relational Fields to Our Models
 
-		
+
+
+
+
+
+
+
+
+
+
+
+
+
