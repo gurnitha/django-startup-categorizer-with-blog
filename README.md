@@ -258,8 +258,13 @@ https://github.com/gurnitha/django-startup-categorizer-with-blog
 	new file:   organizer/urls.py
 	modified:   suorganizer/urls.py
 
+#### 5.7 Building Startup List, Startup Detail Pages and url
 
-
+	modified:   README.md
+	new file:   organizer/templates/organizer/startup_detail.html
+	new file:   organizer/templates/organizer/startup_list.html
+	modified:   organizer/urls.py
+	modified:   organizer/views.py
 
 
 
