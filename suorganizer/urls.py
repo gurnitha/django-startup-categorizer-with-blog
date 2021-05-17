@@ -18,8 +18,16 @@ from django.urls import path
 from django.conf.urls import include, url
 
 from organizer import urls as organizer_urls
+from blog import urls as blog_urls
 
 urlpatterns = [
+
+	# ADMIN
     path('admin/', admin.site.urls),
+
+    # ORGANIZER
     url(r'^', include(organizer_urls)),
+
+    # BLOG
+    url(r'^blog/', include(blog_urls)),
 ]

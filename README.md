@@ -266,7 +266,13 @@ https://github.com/gurnitha/django-startup-categorizer-with-blog
 	modified:   organizer/urls.py
 	modified:   organizer/views.py
 
+#### 5.8 Building Blog Post List: View, Template and url
 
+	modified:   README.md
+	new file:   blog/templates/blog/post_list.html
+	new file:   blog/urls.py
+	modified:   blog/views.py
+	modified:   suorganizer/urls.py
 
 
 
