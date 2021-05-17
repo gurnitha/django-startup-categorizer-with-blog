@@ -296,9 +296,10 @@ https://github.com/gurnitha/django-startup-categorizer-with-blog
 	modified:   blog/views.py
 
 
+#### 5.11 Class-Based Viewsuse - Using require http methods function decorator 
 
-
-
+	modified:   README.md
+	modified:   blog/views.py
 
 
 

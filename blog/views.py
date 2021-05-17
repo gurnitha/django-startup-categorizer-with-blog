@@ -35,6 +35,7 @@
 # blog/views.py
 from django.shortcuts import render, get_object_or_404
 from django.views.generic import View
+from django.views.decorators.http import require_http_methods
 
 # Create your views here.
 
@@ -44,7 +45,7 @@ from .models import Post
 # Post List
 # http://127.0.0.1:8000/blog/
 class PostList(View):
-	
+
 	template_name = 'blog/post_list.html'
 
 	def get(self, request):
@@ -58,6 +59,7 @@ class PostList(View):
 
 # Post Detail: 
 # http://127.0.0.1:8000/blog/2021/05/flask-essentials/
+@require_http_methods(['HEAD', 'GET'])
 def post_detail(request, year, month, slug):
 	post = get_object_or_404(
 			Post,
