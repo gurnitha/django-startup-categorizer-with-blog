@@ -289,8 +289,11 @@ https://github.com/gurnitha/django-startup-categorizer-with-blog
 	modified:   blog/urls.py
 	modified:   blog/views.py
 
+#### 5.10 Class-Based Views - Replacing string in render() with an attribute
 
-
+	modified:   README.md
+	modified:   blog/urls.py
+	modified:   blog/views.py
 
 
 

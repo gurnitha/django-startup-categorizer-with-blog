@@ -44,12 +44,16 @@ from .models import Post
 # Post List
 # http://127.0.0.1:8000/blog/
 class PostList(View):
+	
+	template_name = 'blog/post_list.html'
+
 	def get(self, request):
 		post_list = Post.objects.all()
 		context = {
 			'post_list':post_list
 		}
-		return render(request, 'blog/post_list.html',context)
+
+		return render(request, self.template_name, context)
 
 
 # Post Detail: 

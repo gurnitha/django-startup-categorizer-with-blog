@@ -29,7 +29,7 @@ urlpatterns = [
 
     url(r'^$',
 	        # post_list,
-	        PostList.as_view(),
+	        PostList.as_view(template_name = 'blog/post_list.html'),
 	        name='blog_post_list'),
 
     url(r'^(?P<year>\d{4})/'
