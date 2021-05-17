@@ -301,6 +301,10 @@ https://github.com/gurnitha/django-startup-categorizer-with-blog
 	modified:   README.md
 	modified:   blog/views.py
 
+#### 5.12 Directing the Homepage with URL Configurations
+
+	modified:   README.md
+	modified:   suorganizer/urls.py
 
 
 

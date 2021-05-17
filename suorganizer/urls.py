@@ -13,12 +13,34 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
+# from django.contrib import admin
+# from django.urls import path
+# from django.conf.urls import include, url
+
+# from organizer import urls as organizer_urls
+# from blog import urls as blog_urls
+
+# urlpatterns = [
+
+# 	# ADMIN
+#     path('admin/', admin.site.urls),
+
+#     # ORGANIZER
+#     url(r'^', include(organizer_urls)),
+
+#     # BLOG
+#     url(r'^blog/', include(blog_urls)),
+# ]
+
+
+# USING CLASS-BASED VIEW
 from django.contrib import admin
 from django.urls import path
 from django.conf.urls import include, url
 
 from organizer import urls as organizer_urls
 from blog import urls as blog_urls
+from blog.views import PostList
 
 urlpatterns = [
 
@@ -29,5 +51,6 @@ urlpatterns = [
     url(r'^', include(organizer_urls)),
 
     # BLOG
+    url(r'^$', PostList.as_view()),
     url(r'^blog/', include(blog_urls)),
 ]
