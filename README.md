@@ -252,3 +252,36 @@ https://github.com/gurnitha/django-startup-categorizer-with-blog
 	modified:   README.md
 	modified:   organizer/views.py
 
+#### 5.6 Implementing URL
+
+	modified:   README.md
+	new file:   organizer/urls.py
+	modified:   suorganizer/urls.py
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
