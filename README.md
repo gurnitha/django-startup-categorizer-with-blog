@@ -355,3 +355,8 @@ https://github.com/gurnitha/django-startup-categorizer-with-blog
 	modified:   blog/templates/blog/post_list.html
 
 
+#### 6.5 Replacing Tag Detail Page Links with get absolute url()
+
+	modified:   README.md
+	modified:   organizer/models.py
+	modified:   organizer/templates/organizer/tag_list.html

@@ -1,5 +1,6 @@
 # organizer/models.py
 from django.db import models
+from django.urls import reverse
 
 # Create your models here.
 
@@ -12,8 +13,15 @@ class Tag(models.Model):
 			unique=True,
 			help_text='A label for URL config.')
 
+
 	def __str__(self):
 		return self.name 
+
+
+	def get_absolute_url(self):
+		return reverse('organizer_tag_detail',
+			kwargs={'slug': self.slug})
+			# args=(self.slug,)) # It is also possible to use args instead of kwargs
 
 
 # ORGANIZER MODELS: Startup
@@ -45,6 +53,7 @@ class Startup(models.Model):
 
 	def __str__(self):
 		return self.name 
+
 
 
 # ORGANIZER MODELS: NewsLink
