@@ -329,3 +329,17 @@ https://github.com/gurnitha/django-startup-categorizer-with-blog
 	modified:   suorganizer/views.py
 
 
+### -------6/12--------
+
+### 6. Integrating Models, Templates, Views, and URL Configurations to Create Links between Webpages
+
+
+### 6.1 Using the url Template Tag to Create URL Paths for the Navigation Menu
+
+	modified:   README.md
+	modified:   templates/base.html
+
+
+
+
+	
