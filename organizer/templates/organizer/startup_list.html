@@ -10,7 +10,9 @@
   <ul>
     {% for startup in startup_list %}
       <li>
-        <a href="">
+        {# http://127.0.0.1:8000/startup/django-for-beginners/ #}
+        <a href="{% url 'organizer_startup_detail' slug=startup.slug %}">
+          {# Django for Beginners #}
           {{ startup.name }}</a>
       </li>
     {% empty %}

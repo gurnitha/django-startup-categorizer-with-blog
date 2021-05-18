@@ -344,3 +344,8 @@ https://github.com/gurnitha/django-startup-categorizer-with-blog
 	modified:   README.md
 	modified:   organizer/templates/organizer/tag_list.html
 
+#### 6.3 Linking and display Startup Detail page
+
+	modified:   README.md
+	modified:   organizer/templates/organizer/startup_list.html
+	
