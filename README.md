@@ -372,3 +372,12 @@ https://github.com/gurnitha/django-startup-categorizer-with-blog
 	modified:   README.md
 	modified:   blog/models.py
 	modified:   blog/templates/blog/post_list.html
+
+#### 6.8 Adding get_absolute_url to: Post Detail, Tag Detail and Startup Detail pages
+
+	modified:   README.md
+	modified:   blog/templates/blog/post_detail.html
+	modified:   organizer/templates/organizer/startup_detail.html
+	modified:   organizer/templates/organizer/tag_detail.html
+
+	END of Ch06 - All pages are linking and work
