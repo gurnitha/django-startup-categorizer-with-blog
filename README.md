@@ -360,3 +360,10 @@ https://github.com/gurnitha/django-startup-categorizer-with-blog
 	modified:   README.md
 	modified:   organizer/models.py
 	modified:   organizer/templates/organizer/tag_list.html
+
+#### 6.6 Replacing Startup Detail Page Links with get absolute url()
+
+	modified:   README.md
+	modified:   organizer/models.py
+	modified:   organizer/templates/organizer/startup_list.html
+
