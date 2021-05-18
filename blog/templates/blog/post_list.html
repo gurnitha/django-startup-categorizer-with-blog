@@ -10,8 +10,10 @@
       <article>
         <header>
           <h2>
-            <a href="">
-              {{ post.title|title }}</a>
+            {# http://127.0.0.1:8000/blog/2021/5/flask-essentials/ #}
+            <a href="{% url 'blog_post_detail' post.pub_date.year post.pub_date.month post.slug %}">
+                {# Flask Essentials #}
+                {{ post.title|title }}</a>
           </h2>
           <p>
             Written on:
