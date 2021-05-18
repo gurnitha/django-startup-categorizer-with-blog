@@ -317,3 +317,9 @@ https://github.com/gurnitha/django-startup-categorizer-with-blog
 	modified:   README.md
 	modified:   suorganizer/urls.py
 
+#### 5.15 Redirecting the Homepage with Views using redirect()
+
+	modified:   README.md
+	modified:   suorganizer/urls.py
+	modified:   suorganizer/views.py
+

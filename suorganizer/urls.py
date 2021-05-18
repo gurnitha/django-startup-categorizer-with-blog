@@ -49,7 +49,7 @@ urlpatterns = [
     # '''This url redirect to: http://127.0.0.1:8000/blog/'''
     url(r'^$', redirect_root),
     # '''This url returns: http://127.0.0.1:8000/blog/'''
-    # url(r'^$', PostList.as_view()), # replace by url above (line 50)
+    url(r'^$', PostList.as_view()), # replace by url above (line 50)
     url(r'^blog/', include(blog_urls)), 
 
     # ORGANIZER
