@@ -41,16 +41,19 @@ from django.conf.urls import include, url
 from organizer import urls as organizer_urls
 from blog import urls as blog_urls
 from blog.views import PostList
+from suorganizer.views import redirect_root
 
 urlpatterns = [
 
-	# ADMIN
-    path('admin/', admin.site.urls),
+    # BLOG
+    url(r'^$', PostList.as_view()),
+    # url(r'^blog/', include(blog_urls)), # replace by url bellow
+    url(r'^', redirect_root),
 
     # ORGANIZER
     url(r'^', include(organizer_urls)),
 
-    # BLOG
-    url(r'^$', PostList.as_view()),
-    url(r'^blog/', include(blog_urls)),
+	# ADMIN
+    path('admin/', admin.site.urls),
+
 ]
