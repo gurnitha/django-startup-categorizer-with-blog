@@ -11,7 +11,11 @@
 	<ul>
 		{% for tag in tag_list %}
 		<li>
-			<a href="">{{ tag.name|title }}</a>
+			{# http://127.0.0.1:8000/tag/django/ #}
+			<a href="{% url 'organizer_tag_detail' tag.slug %}">
+				{{ tag.name|title }}</a>
+			{# Above code is similar to this: 
+				<a href="/tag/{{ tag.slug }}/">{{ tag.name|title }}</a> #}
 		</li>
 		{% empty %}
 			<li><em>There are currently no Tags available.</em></li>
